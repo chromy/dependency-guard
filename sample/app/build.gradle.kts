@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("com.dropbox.dependency-guard")
+    alias(libs.plugins.emerge)
 }
 
 android {
@@ -15,6 +16,7 @@ android {
 dependencies {
     implementation(project(":sample:module1"))
     implementation(libs.androidx.activity)
+    implementation("com.emergetools.reaper:reaper:1.0.0-beta01")
 }
 
 dependencyGuard {
